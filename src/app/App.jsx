@@ -1,8 +1,14 @@
 import React from "react";
-import { SampleComponent } from "components";
+import { IntroSection, OccupationSection, NextButton } from "components";
 
 function App() {
-  return <SampleComponent />;
+  return (
+    <div>
+      <IntroSection />
+      <OccupationSection />
+      <NextButton />
+    </div>
+  );
 }
 
 export default App;
