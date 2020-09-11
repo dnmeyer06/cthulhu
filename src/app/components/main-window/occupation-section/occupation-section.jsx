@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { OccupationContainer } from "./styled-components";
+import React, { useState, useEffect } from 'react';
+import { OccupationContainer } from './styled-components';
 
 export function OccupationSection() {
   const [occupations, setOccupations] = useState([]);
