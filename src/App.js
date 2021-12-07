@@ -1,14 +1,25 @@
+import React from "react";
 import { render } from "react-dom";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./Home.tsx";
+import CharacterCreator from "./CharacterCreator.tsx";
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <h1>How would you like to create your character?</h1>
-      <button>Classic method</button>
-      <button>Point Buy method</button>
-    </BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/classic" element={<CharacterCreator method="classic" />} />
+      <Route
+        path="/pointbuy"
+        element={<CharacterCreator method="pointbuy" />}
+      />
+    </Routes>
   );
 };
 
-render(<App />, document.getElementById("root"));
+render(
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>,
+  document.getElementById("root")
+);
